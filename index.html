@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ted Wolf — educational leader, computer science educator, and higher education instructor in North Texas." />
+  <meta name="theme-color" content="#11110f" id="theme-color" />
+  <title>Ted Wolf — Educational Leadership</title>
+  <style>
+    :root{--bg:#11110f;--panel:#191915;--text:#f4f0e8;--muted:#b8b1a6;--accent:#d8a96d;--line:#2c2b25;--header-bg:rgba(17,17,15,.88);--button-ink:#141411;--photo-bg:#222;--footer:#8f8a82;--max:1180px}
+    html[data-theme="light"]{--bg:#f5f2eb;--panel:#ffffff;--text:#1b1b18;--muted:#68645c;--accent:#9a5f25;--line:#d9d3c8;--header-bg:rgba(245,242,235,.9);--button-ink:#f8f5ef;--photo-bg:#e7e1d7;--footer:#777168}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;transition:background-color .25s ease,color .25s ease}
+    a{color:inherit;text-decoration:none} .site-header{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:20px 5vw;background:var(--header-bg);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.04)}
+    .brand{font-weight:800;font-size:1.2rem;letter-spacing:.04em}.dot{color:var(--accent)} .header-actions{display:flex;align-items:center;gap:18px}.nav{display:flex;gap:24px;font-size:.95rem;color:var(--muted)} .nav a:hover{color:var(--text)}.theme-toggle{width:42px;height:42px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:var(--text);display:grid;place-items:center;cursor:pointer;transition:transform .2s ease,background-color .25s ease,border-color .25s ease}.theme-toggle:hover{transform:translateY(-1px)}.theme-toggle svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.icon-sun{display:none}html[data-theme="light"] .icon-sun{display:block}html[data-theme="light"] .icon-moon{display:none}
+    .shell{width:min(var(--max),90vw);margin:auto}.hero{min-height:78vh;display:grid;grid-template-columns:1.25fr .75fr;gap:64px;align-items:center;padding:88px 0 72px}.eyebrow{text-transform:uppercase;letter-spacing:.14em;color:var(--accent);font-size:.78rem;font-weight:700}
+    h1,h2,h3{line-height:1.08;margin:0 0 18px} h1{font-size:clamp(3rem,7vw,6.6rem);letter-spacing:-.045em;max-width:900px} h2{font-size:clamp(2.2rem,4.8vw,4.2rem);letter-spacing:-.03em} h3{font-size:1.25rem}.lede{font-size:1.2rem;max-width:760px;color:var(--muted)}.lede strong{color:var(--text)}
+    .hero-photo{justify-self:end;width:min(360px,100%);aspect-ratio:4/5;border-radius:28px;overflow:hidden;border:1px solid var(--line);background:var(--photo-bg)}.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 18%;display:block}
+    .hero-actions{display:flex;gap:12px;margin:30px 0 28px}.button{padding:12px 18px;border-radius:999px;border:1px solid var(--line);font-weight:700;font-size:.94rem}.button.primary{background:var(--text);color:var(--button-ink)}.button.ghost{color:var(--text)}.status-row{display:flex;flex-wrap:wrap;gap:12px 22px;color:var(--muted);font-size:.9rem}
+    .section{display:grid;grid-template-columns:180px 1fr;gap:36px;padding:88px 0;border-top:1px solid var(--line)}.section-label{font-size:.8rem;color:var(--accent);text-transform:uppercase;letter-spacing:.12em}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:48px}.prose{color:var(--muted);font-size:1.06rem}.prose p:first-child{margin-top:0}
+    .stack-list{display:grid}.stack-item{display:grid;grid-template-columns:140px 1fr;gap:30px;padding:28px 0;border-bottom:1px solid var(--line)}.stack-meta{color:var(--accent);font-size:.92rem}.role{font-weight:700;color:var(--text);margin:0 0 8px}.stack-item p:last-child{color:var(--muted);margin-bottom:0}
+    .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:28px}.card-kicker{font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;color:var(--accent)}.card p{color:var(--muted);margin-bottom:0}
+    .credentials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.credentials-grid ul{padding-left:18px;color:var(--muted)}
+    .contact{padding:96px 0;border-top:1px solid var(--line)}.contact p{max-width:720px;color:var(--muted)}.contact-links{display:flex;gap:16px;margin-top:24px}.contact-links a{border-bottom:1px solid var(--accent);padding-bottom:3px}
+    .site-footer{width:min(var(--max),90vw);margin:auto;padding:28px 0 44px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--footer);font-size:.85rem}
+    @media (max-width:860px){.hero{grid-template-columns:1fr;gap:34px;padding-top:64px}.hero-photo{justify-self:start;width:260px}.section{grid-template-columns:1fr}.two-col,.credentials-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.header-actions{gap:10px}.nav{gap:14px;font-size:.86rem}.nav a:nth-child(2),.nav a:nth-child(3){display:none}.theme-toggle{width:38px;height:38px}.stack-item{grid-template-columns:1fr;gap:8px}.site-footer{gap:12px;flex-direction:column}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Ted Wolf home">TW<span class="dot">.</span></a>
+    <div class="header-actions">
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#about">About</a><a href="#work">Experience</a><a href="#leadership">Leadership</a><a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode" title="Toggle light/dark mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2Z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="top" class="shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Dallas–Fort Worth · Educational Leadership</p>
+        <h1>I help people learn, lead, and build better schools.</h1>
+        <p class="lede">I’m <strong>Ted Wolf</strong>, an educational leader, computer science educator, and higher education instructor with 17+ years of experience across K–12, special education, alternative education, CTE, and higher education.</p>
+        <div class="hero-actions"><a class="button primary" href="#work">View experience</a><a class="button ghost" href="mailto:wolfted.csuf@outlook.com">Email me</a></div>
+        <div class="status-row"><span>Principal Certified</span><span>M.Ed. Educational Leadership</span><span>MBA</span><span>President, CSTA DFW</span></div>
+      </div>
+      <figure class="hero-photo"><img src="assets/ted-wolf-headshot.png" alt="Professional headshot of Ted Wolf" /></figure>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-label">01 / About</div>
+      <div class="section-content two-col">
+        <h2>Student-centered. People-first. Built for impact.</h2>
+        <div class="prose">
+          <p>My work sits at the intersection of instruction, student support, technology, and leadership. I believe strong schools are built through clear expectations, thoughtful systems, meaningful relationships, and consistent follow-through.</p>
+          <p>I’ve worked with students and educators in traditional classrooms, special education, behavior support, CTE, AP Computer Science, alternative settings, and higher education. That range shapes how I approach leadership: listen first, use evidence, develop people, and keep students at the center of decisions.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section">
+      <div class="section-label">02 / Experience</div>
+      <div class="section-content"><div class="stack-list">
+        <article class="stack-item"><div class="stack-meta">2026–Present</div><div><h3>Computer Science Teachers Association — DFW</h3><p class="role">President</p><p>Lead a regional professional community focused on computer science education, educator development, collaboration, advocacy, and expanding access to high-quality CS learning across North Texas.</p></div></article>
+        <article class="stack-item"><div class="stack-meta">2018–2026</div><div><h3>Plano ISD</h3><p class="role">AP Computer Science Teacher</p><p>Instruction, student support, technology integration, campus collaboration, and college/career readiness.</p></div></article>
+        <article class="stack-item"><div class="stack-meta">2024–Present</div><div><h3>Higher Education</h3><p class="role">Adjunct Faculty · Collin College & Dallas College</p><p>College instruction, student success, digital learning, and workforce-aligned coursework.</p></div></article>
+        <article class="stack-item"><div class="stack-meta">2022–2024</div><div><h3>Lovejoy ISD</h3><p class="role">Teacher · Administrative Intern</p><p>Campus improvement, leadership development, attendance initiatives, CTE pathways, and administrator-on-duty experience.</p></div></article>
+        <article class="stack-item"><div class="stack-meta">2020–2022</div><div><h3>Frisco ISD</h3><p class="role">Special Education Teacher · Team Lead</p><p>ARD/IEP implementation, accommodations, progress monitoring, team leadership, and family collaboration.</p></div></article>
+        <article class="stack-item"><div class="stack-meta">2008–2018</div><div><h3>Orange County Department of Education</h3><p class="role">Behavior Specialist · Title I Tutor</p><p>Behavior support, intervention, alternative education, relationship-building, and student success systems.</p></div></article>
+      </div></div>
+    </section>
+
+    <section id="leadership" class="section">
+      <div class="section-label">03 / Leadership</div>
+      <div class="section-content cards">
+        <article class="card"><span class="card-kicker">Leadership</span><h3>Develop people</h3><p>Coach, mentor, and support educators with clarity, actionable feedback, and high expectations.</p></article>
+        <article class="card"><span class="card-kicker">Systems</span><h3>Use data well</h3><p>Turn attendance, achievement, behavior, and intervention data into focused actions and measurable follow-up.</p></article>
+        <article class="card"><span class="card-kicker">Culture</span><h3>Build trust</h3><p>Create environments where students, families, and staff feel known, respected, supported, and accountable.</p></article>
+        <article class="card"><span class="card-kicker">Innovation</span><h3>Connect learning to the future</h3><p>Bridge K–12, CTE, computer science, P-TECH, industry credentials, and higher education opportunities.</p></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-label">04 / Credentials</div>
+      <div class="section-content credentials-grid">
+        <div><h3>Education</h3><ul><li>M.Ed., Educational Leadership</li><li>MBA</li><li>B.A., Business Administration</li></ul></div>
+        <div><h3>Texas Certifications</h3><ul><li>Principal as Instructional Leader</li><li>Special Education EC–12</li><li>Technology Applications EC–12</li><li>Core Subjects EC–6 with STR</li></ul></div>
+        <div><h3>Professional Leadership</h3><ul><li>President, CSTA DFW</li><li>Administrative internship experience</li><li>Campus and district committee leadership</li></ul></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <p class="eyebrow">Let’s connect</p><h2>Building the next chapter in educational leadership.</h2>
+      <p>Open to campus, district, charter, private-school, and higher-education leadership opportunities across DFW.</p>
+      <div class="contact-links"><a href="mailto:wolfted.csuf@outlook.com">Email</a><a href="https://www.linkedin.com/in/ted-wolf" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
+    </section>
+  </main>
+  <footer class="site-footer"><span>© <span id="year"></span> Ted Wolf</span><span>Educational Leadership Portfolio</span></footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const root = document.documentElement;
+    const toggle = document.getElementById('theme-toggle');
+    const themeColor = document.getElementById('theme-color');
+    const savedTheme = localStorage.getItem('ted-wolf-theme');
+    const preferredTheme = savedTheme || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+
+    function applyTheme(theme) {
+      root.dataset.theme = theme;
+      const light = theme === 'light';
+      toggle.setAttribute('aria-label', light ? 'Switch to dark mode' : 'Switch to light mode');
+      themeColor.setAttribute('content', light ? '#f5f2eb' : '#11110f');
+    }
+
+    applyTheme(preferredTheme);
+
+    toggle.addEventListener('click', () => {
+      const nextTheme = root.dataset.theme === 'light' ? 'dark' : 'light';
+      localStorage.setItem('ted-wolf-theme', nextTheme);
+      applyTheme(nextTheme);
+    });
+  </script>
+</body>
+</html>
